@@ -4,7 +4,7 @@ const prefix = '!'
 
 client.on("ready", async () => {
   console.log('Bot Is Succesvol Opgestart!')
-  client.user.setActivity("TV", {
+  client.user.setActivity("PindaNetwork", {
     type: "WATCHING"
   });
 });
@@ -32,19 +32,19 @@ client.on("guildMemberAdd", member => {
     .setThumbnail(member.user.avatarURL)
     .setFooter(member.user.username);
 
-  member.guild.channels.find("id", "459409599389368360").send({
+  member.guild.channels.find("id", "421174663071137813").send({
     embed
   })
 });
 
 
 client.on("guildMemberRemove", member => {
-  const channel = member.guild.channels.find("id", "459409599389368360")
+  const channel = member.guild.channels.find("id", "421174663071137813")
 
   var embed = new Discord.RichEmbed()
     .setColor(0xf48428)
     .setThumbnail(member.user.avatarURL)
-    .setDescription(` ** ${member.user.username} ** leaved!: wave: \nUsercount: ** ${member.guild.members.size}! ** `)
+    .setDescription(` ** ${member.user.username} ** leaved! :wave: \nUsercount: ** ${member.guild.members.size}! ** `)
     .setFooter(member.user.username);
   channel.send({
     embed
